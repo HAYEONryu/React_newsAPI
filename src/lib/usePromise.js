@@ -17,6 +17,7 @@ export default function usePromise( promiseCreator, deps){
             setLoading(false);
         };
         process();
+        console.log(deps +"는 deps");
     }, deps);
     return([loading, resolved, error]);
 }

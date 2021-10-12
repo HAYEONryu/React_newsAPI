@@ -20,6 +20,7 @@ const NewsListBlock = styled.div`
 const NewsList = ({ category }) => {
   const [loading, response, error] = usePromise(() => {
     const query = category === 'all' ? '' : `&category=${category}`;
+    console.log("query "+ category);
     return axios.get(
         `https://newsapi.org/v2/top-headlines?country=kr${query}&apiKey=b2e3847e50b740c9a2a2c08f24b08497`
     );
